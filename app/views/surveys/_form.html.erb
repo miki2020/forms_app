@@ -10,28 +10,37 @@
       </ul>
     </div>
   <% end %>
+  <div id="tabs">
+    <ul>
+      <li><a href="#tabs-1">Page 1</a></li>
+      <li><a href="#tabs-2">Page 2</a></li>
+      <li><a href="#tabs-3">Page 3</a></li>
+    </ul>
+    <div id="tabs-1">
+      <div class="field">
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+      </div>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+      <div class="field">
+        <%= form.label :birth_date %>
+        <%= form.date_select :birth_date %>
+      </div>
+    </div>
+    <div id="tabs-2">
+      <div class="field">
+        <%= form.label :about %>
+        <%= form.text_area :about %>
+      </div>
+    </div>
+    <div id="tabs-3">
+      <div class="field">
+        <%= form.label :operating_system %>
+        <%= form.select :operating_system, ['Mac Os', 'Linux', 'Windows']%>
+        <%#= form.text_field :operating_system %>
+      </div>
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :birth_date %>
-    <%= form.date_select :birth_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :about %>
-    <%= form.text_area :about %>
-  </div>
-
-  <div class="field">
-    <%= form.label :operating_system %>
-    <%= form.select :operating_system, ['Mac Os', 'Linux', 'Windows']%>
-    <%#= form.text_field :operating_system %>
-  </div>
-
   <div class="actions">
     <%= form.submit %>
   </div>
